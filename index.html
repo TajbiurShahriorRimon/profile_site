@@ -406,9 +406,9 @@ img {
     $(document).on("click", "#eCommerceJavaSpring", function (e) {
         e.preventDefault();
 
-        var myVideo = document.getElementById("videoPlaySrc");
-        myVideo.src = "profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
-        let file = "profile_site/projectDetails/webApp/eCommerceJavaSpring.html";
+        //var myVideo = document.getElementById("videoPlaySrc");
+        //myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+        let file = "/profile_site/projectDetails/webApp/eCommerceJavaSpring.html";
         if(file){
             const projectDescription = document.getElementById('projectDetails');
             var title = document.getElementById("modalTitle");
@@ -419,11 +419,11 @@ img {
                     projectDescription.innerHTML = this.responseText;
                 }
             };
-            xhttp.open('GET', 'profile_site/projectDetails/webApp/eCommerceJavaSpring.html', true);
+            xhttp.open('GET', '/profile_site/projectDetails/webApp/eCommerceJavaSpring.html', true);
             xhttp.send();
         }
 
-        myVideo.load();
+        //myVideo.load();
     });
 
     $(document).on("click", "#employeeManagementSystem", function(e){
@@ -432,9 +432,9 @@ img {
         // var modal = bootstrap.Modal.getOrCreateInstance(myModal)
         // modal.show();
 
-        var myVideo = document.getElementById("videoPlaySrc");
+        //var myVideo = document.getElementById("videoPlaySrc");
         if(this.id == "employeeManagementSystem"){
-            myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+            //myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
             let file = "/profile_site/projectDetails/desktopApp/employeeManagementSystem.html";
             if(file){
                 const projectDescription = document.getElementById('projectDetails');
@@ -451,7 +451,7 @@ img {
             }
         }
         
-        myVideo.load();
+        //myVideo.load();
     });
 
     $(document).on("click", "#transportationManagementSystem", function (e) {
@@ -471,8 +471,6 @@ img {
             xhttp.open('GET', '/profile_site/projectDetails/desktopApp/transportationManagementSystem.html', true);
             xhttp.send();
         }
-
-        myVideo.load();
     });
     
     // $(document).on("click", ".projectDetails", function () {
