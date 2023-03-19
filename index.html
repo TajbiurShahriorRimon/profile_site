@@ -434,8 +434,8 @@ img {
 
         var myVideo = document.getElementById("videoPlaySrc");
         if(this.id == "employeeManagementSystem"){
-            myVideo.src = "profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
-            let file = "profile_site/projectDetails/desktopApp/employeeManagementSystem.html";
+            myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+            let file = "/profile_site/projectDetails/desktopApp/employeeManagementSystem.html";
             if(file){
                 const projectDescription = document.getElementById('projectDetails');
                 var title = document.getElementById("modalTitle");
@@ -446,7 +446,7 @@ img {
                         projectDescription.innerHTML = this.responseText;
                     }
                 };
-                xhttp.open('GET', 'profile_site/projectDetails/desktopApp/employeeManagementSystem.html', true);
+                xhttp.open('GET', '/profile_site/projectDetails/desktopApp/employeeManagementSystem.html', true);
                 xhttp.send();
             }
         }
