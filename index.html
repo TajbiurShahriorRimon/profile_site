@@ -139,18 +139,41 @@
   background: black;
   color: white;
 }
-    </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+.modal-content {
+  height: 700px;
+}
+
+video {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+}
+
+img {
+    width: 100%;
+}
+
+#projectDescription{
+    height: 500px;
+    overflow: scroll;
+}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
 </head>
-<body>
+<body onload="loadPage()">
 <div class="container emp-profile">
-            <form method="post">
+        <div>
+            <!-- <form method="post"> -->
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
                             <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/> -->
-                            <img src="/profile_site/photo/photo.png" />
+                            <img style="border: 1px solid #360b0b; border-radius: 4px;" src="/photo/Profile Pic.jpg" />
                             <!-- <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
@@ -182,7 +205,7 @@
                                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Skills</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="project-tab" data-toggle="tab" href="#project" role="tab" aria-controls="project" aria-selected="false">Project</a>
+                                        <a class="nav-link" id="project-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="project" aria-selected="false">Projects</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="career-tab" data-toggle="tab" href="#career" role="tab" aria-controls="profile" aria-selected="false">Academic</a>
@@ -269,7 +292,7 @@
                                             PHP, Laravel, API
                                         </li>
                                         <li class="not-overflow">
-                                            Java (Object Oriented Programming)
+                                            Java (Object Oriented Programming, Spring Boot)
                                         </li>
                                         <li class="not-overflow">
                                             C, C++
@@ -306,46 +329,8 @@
                             </div>
 
                             <!--Projects-->
-                            <div class="tab-pane fade" id="project" role="tabpanel" aria-labelledby="profile-tab">
-                                <div>
-                                    <h4 class="not-overflow"><strong><u>Web Application</u></strong></h4>
-                                    <ul>
-                                        <li class="not-overflow">
-                                            <a href="https://github.com/TajbiurShahriorRimon/EduMax--Online-Teaching-And-Learning-Platform">
-                                                Personal Project using ASP.NET MVC
-                                            </a>
-                                            <hr>
-                                        </li>
-                                        <li class="not-overflow">
-                                            <a href="https://github.com/TajbiurShahriorRimon/MidLaravelPoject">
-                                                University Group Project using Laravel Framework
-                                            </a>
-                                            <hr>
-                                        </li>
-                                        <li class="not-overflow">
-                                            <a href="https://github.com/TajbiurShahriorRimon/Asp.Net-Mid-Project-PCHut">
-                                                University Group Project using ASP.NET MVC
-                                            </a>
-                                            <hr>
-                                        </li>
-                                        <li class="not-overflow">
-                                            <a href="https://github.com/TajbiurShahriorRimon/ADBMS-Fruit-Shop-Management-System">
-                                                University Project using PHP and PL/SQL (Done by Me!)
-                                            </a>
-                                            <hr>
-                                        </li>
-                                    </ul>
-
-                                    <h4 class="not-overflow"><strong><u>Desktop Application</u></strong></h4>
-                                    <ul>
-                                        <li class="not-overflow">
-                                            <a href="https://github.com/TajbiurShahriorRimon/TransportationManagementSystem">
-                                                University Group Project using C# Programming Language
-                                            </a>
-                                            <hr>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="profile-tab">
+                                
                             </div>
 
                             <!--Career Tab's data-->
@@ -372,16 +357,116 @@
                                     </div>
                                     <div class="col-md-6">
                                         <p>Edexcel, British Council</p>
+                                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#mdl12">
+                                            Simple Employee Management System
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>           
+            <!-- </form> -->
         </div>
 <script type="text/javascript">
+    // document.getElementById("employeeManagementSystem").addEventListener("click", function(event) {
+    //     event.preventDefault();
+    //     alert("hello Worl");
+    // });
 
+    function loadPage(){
+        let file = "projects.html";
+        if(file){
+            const projects = document.getElementById('projects');
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projects.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', 'projects.html', true);
+            xhttp.send();
+        }
+    }
+
+    $(document).on("click", "#eCommerceJavaSpring", function (e) {
+        e.preventDefault();
+
+        var myVideo = document.getElementById("videoPlaySrc");
+        myVideo.src = "files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+        let file = "projectDetails/webApp/eCommerceJavaSpring.html";
+        if(file){
+            const projectDescription = document.getElementById('projectDetails');
+            var title = document.getElementById("modalTitle");
+            title.innerHTML = this.text;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projectDescription.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', 'projectDetails/webApp/eCommerceJavaSpring.html', true);
+            xhttp.send();
+        }
+
+        myVideo.load();
+    });
+
+    $(document).on("click", "#employeeManagementSystem", function(e){
+        e.preventDefault();
+        //var myModal = document.getElementById('modalSimpleEmployeeManagementSystem');
+        // var modal = bootstrap.Modal.getOrCreateInstance(myModal)
+        // modal.show();
+
+        var myVideo = document.getElementById("videoPlaySrc");
+        if(this.id == "employeeManagementSystem"){
+            myVideo.src = "files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+            let file = "projectDetails/desktopApp/employeeManagementSystem.html";
+            if(file){
+                const projectDescription = document.getElementById('projectDetails');
+                var title = document.getElementById("modalTitle");
+                title.innerHTML = this.text;
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        projectDescription.innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open('GET', 'projectDetails/desktopApp/employeeManagementSystem.html', true);
+                xhttp.send();
+            }
+        }
+        
+        myVideo.load();
+    });
+
+    $(document).on("click", "#transportationManagementSystem", function (e) {
+        e.preventDefault();
+
+        let file = "projectDetails/desktopApp/transportationManagementSystem.html";
+        if(file){
+            const projectDescription = document.getElementById('projectDetails');
+            var title = document.getElementById("modalTitle");
+            title.innerHTML = this.text;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projectDescription.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', 'projectDetails/desktopApp/transportationManagementSystem.html', true);
+            xhttp.send();
+        }
+
+        myVideo.load();
+    });
+    
+    // $(document).on("click", ".projectDetails", function () {
+    //     alert("dsd");
+    //     //$("#modalSimpleEmployeeManagementSystem #modalTitle").text("Create Branch");
+    //     $("#modalBranch #empChange").text("Test");
+    //     //$("#frmBranch").trigger("reset");
+    // });
 </script>
 </body>
 </html>
