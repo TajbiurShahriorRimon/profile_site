@@ -457,7 +457,7 @@ img {
     $(document).on("click", "#transportationManagementSystem", function (e) {
         e.preventDefault();
 
-        let file = "profile_site/projectDetails/desktopApp/transportationManagementSystem.html";
+        let file = "/profile_site/projectDetails/desktopApp/transportationManagementSystem.html";
         if(file){
             const projectDescription = document.getElementById('projectDetails');
             var title = document.getElementById("modalTitle");
@@ -468,7 +468,7 @@ img {
                     projectDescription.innerHTML = this.responseText;
                 }
             };
-            xhttp.open('GET', 'profile_site/projectDetails/desktopApp/transportationManagementSystem.html', true);
+            xhttp.open('GET', '/profile_site/projectDetails/desktopApp/transportationManagementSystem.html', true);
             xhttp.send();
         }
 
