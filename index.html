@@ -159,6 +159,18 @@ img {
     overflow: scroll;
 }
 
+#resumeBtn{
+    background-color: #4CAF50;
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+#resumeBtn:hover {
+  background-color: #4CAF50;
+  background-color: rgb(85, 151, 169); 
+  color: rgb(200, 44, 44);
+}
+
 </style>
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -173,7 +185,7 @@ img {
                     <div class="col-md-4">
                         <div class="profile-img">
                             <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/> -->
-                            <img style="border: 1px solid #360b0b; border-radius: 4px;" src="/photo/Profile Pic.jpg" />
+                            <img style="border: 1px solid #360b0b; border-radius: 4px;" src="/profile_site//photo/Profile Pic.jpg" />
                             <!-- <div class="file btn btn-lg btn-primary">
                                 Change Photo
                                 <input type="file" name="file"/>
@@ -190,28 +202,33 @@ img {
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
-                                    <h5 class="color: green;">About Me</h5> <hr>
-                                    <p class="proile-rating not-overflow"><strong>
-                                        Assalamualaikum. I am Tajbiur Shahrior Rimon. I am an udergraduate university student of American International University-Bangladesh (AIUB) of Department of
-                                        Science in Computer Information System (CIS). I am interested working in back-end software development.
-                                        Frameworks like ASP.NET MVC, Web API, Laravel, React JS are my interests.
-                                    </strong></p>
-                                    <br> <br><br> <br>
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Skills</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="project-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="project" aria-selected="false">Projects</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="career-tab" data-toggle="tab" href="#career" role="tab" aria-controls="profile" aria-selected="false">Academic</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <h5 class="color: green;">About Me</h5> <hr>
+                            <p class="proile-rating not-overflow"><strong>
+                                Assalamualaikum. I am interested working in back-end software development.
+                                Frameworks like ASP.NET MVC, Web API, Laravel, React JS are my interests. I am looking to work on
+                                Blockchain technology and Smart Contract. My research interest is in Data Mining
+                            </strong></p>
+                            <a href="/profile_site/cv/Resume.pdf" download style="float: right;">
+                                <button id="resumeBtn" class="btn">
+                                    <i class="fa fa-download"></i>Check My <strong>Resume</strong>
+                                </button>
+                            </a>
+                            <br> <br><br> <br>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Skills</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="project-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="project" aria-selected="false">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="career-tab" data-toggle="tab" href="#career" role="tab" aria-controls="profile" aria-selected="false">Academic</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- <div class="col-md-2">
                         <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
@@ -286,13 +303,16 @@ img {
                                     <h4><strong><u>Skills</u></strong></h4>
                                     <ul>
                                         <li class="not-overflow">
-                                            .NET (C#, ASP.NET MVC, ASP.NET Web API)
+                                            .NET (C#, ASP.NET MVC, ASP.NET Web API, Entity Framework, EF Core)
                                         </li>
                                         <li class="not-overflow">
                                             PHP, Laravel, API
                                         </li>
                                         <li class="not-overflow">
-                                            Java (Object Oriented Programming, Spring Boot)
+                                            Solidity
+                                        </li>
+                                        <li class="not-overflow">
+                                            Java (Spring Boot)
                                         </li>
                                         <li class="not-overflow">
                                             C, C++
@@ -301,7 +321,10 @@ img {
                                             MySql Database, MSSQL, Oracle, PL-SQL
                                         </li>
                                         <li class="not-overflow">
-                                            Data Structure & Algorithms
+                                            Data Structures & Algorithms
+                                        </li>
+                                        <li class="not-overflow">
+                                            JavaScript
                                         </li>
                                     </ul>
                                 </div>
@@ -310,10 +333,7 @@ img {
                                     <h4><strong><u>Sound Knowledge</u></strong></h4>
                                     <ul>
                                         <li class="not-overflow">
-                                            Java Script, React JS
-                                        </li>
-                                        <li class="not-overflow">
-                                            JQuery, JSON, AJAX
+                                            React JS, JQuery
                                         </li>
                                         <li class="not-overflow">
                                             HTML, CSS, Bootstrap
@@ -355,12 +375,6 @@ img {
                                     <div class="col-md-6">
                                         <label>O'levels</label>
                                     </div>
-                                    <div class="col-md-6">
-                                        <p>Edexcel, British Council</p>
-                                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#mdl12">
-                                            Simple Employee Management System
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -393,8 +407,8 @@ img {
         e.preventDefault();
 
         var myVideo = document.getElementById("videoPlaySrc");
-        myVideo.src = "files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
-        let file = "projectDetails/webApp/eCommerceJavaSpring.html";
+        myVideo.src = "profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+        let file = "profile_site/projectDetails/webApp/eCommerceJavaSpring.html";
         if(file){
             const projectDescription = document.getElementById('projectDetails');
             var title = document.getElementById("modalTitle");
@@ -405,7 +419,7 @@ img {
                     projectDescription.innerHTML = this.responseText;
                 }
             };
-            xhttp.open('GET', 'projectDetails/webApp/eCommerceJavaSpring.html', true);
+            xhttp.open('GET', 'profile_site/projectDetails/webApp/eCommerceJavaSpring.html', true);
             xhttp.send();
         }
 
@@ -420,8 +434,8 @@ img {
 
         var myVideo = document.getElementById("videoPlaySrc");
         if(this.id == "employeeManagementSystem"){
-            myVideo.src = "files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
-            let file = "projectDetails/desktopApp/employeeManagementSystem.html";
+            myVideo.src = "profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+            let file = "profile_site/projectDetails/desktopApp/employeeManagementSystem.html";
             if(file){
                 const projectDescription = document.getElementById('projectDetails');
                 var title = document.getElementById("modalTitle");
@@ -432,7 +446,7 @@ img {
                         projectDescription.innerHTML = this.responseText;
                     }
                 };
-                xhttp.open('GET', 'projectDetails/desktopApp/employeeManagementSystem.html', true);
+                xhttp.open('GET', 'profile_site/projectDetails/desktopApp/employeeManagementSystem.html', true);
                 xhttp.send();
             }
         }
@@ -443,7 +457,7 @@ img {
     $(document).on("click", "#transportationManagementSystem", function (e) {
         e.preventDefault();
 
-        let file = "projectDetails/desktopApp/transportationManagementSystem.html";
+        let file = "profile_site/projectDetails/desktopApp/transportationManagementSystem.html";
         if(file){
             const projectDescription = document.getElementById('projectDetails');
             var title = document.getElementById("modalTitle");
@@ -454,7 +468,7 @@ img {
                     projectDescription.innerHTML = this.responseText;
                 }
             };
-            xhttp.open('GET', 'projectDetails/desktopApp/transportationManagementSystem.html', true);
+            xhttp.open('GET', 'profile_site/projectDetails/desktopApp/transportationManagementSystem.html', true);
             xhttp.send();
         }
 
