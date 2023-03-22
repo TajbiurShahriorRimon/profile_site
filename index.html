@@ -171,6 +171,18 @@ img {
   color: rgb(200, 44, 44);
 }
 
+.viewResearchBtn{
+    background-color: #4c65af;
+    color: black; 
+    border: 2px solid #4c65af;
+}
+
+#viewResearchBtn:hover {
+  background-color: #7da324;
+  background-color: rgba(169, 85, 131, 0.54); 
+  color: rgb(208, 82, 82);
+}
+
 </style>
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -208,7 +220,7 @@ img {
                                 Frameworks like ASP.NET MVC, Web API, Laravel, React JS are my interests. I am looking to work on
                                 Blockchain technology and Smart Contract. My research interest is in Data Mining
                             </strong></p>
-                            <a href="/profile_site/cv/Resume.pdf" download style="float: right;">
+                            <a href="/profile_site/cv/Resume.pdf" style="float: right;">
                                 <button id="resumeBtn" class="btn">
                                     <i class="fa fa-id-card-o"></i> Check My <strong>Resume</strong>
                                 </button>
@@ -216,16 +228,16 @@ img {
                             <br> <br><br> <br>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                    <a class="nav-link active" id="project-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="project" aria-selected="false">Projects</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Skills</a>
+                                </li>                        
+                                <li class="nav-item">
+                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="project-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="project" aria-selected="false">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="career-tab" data-toggle="tab" href="#career" role="tab" aria-controls="profile" aria-selected="false">Academic</a>
+                                    <a class="nav-link" id="career-tab" data-toggle="tab" href="#career" role="tab" aria-controls="profile" aria-selected="false">Academic and Career</a>
                                 </li>
                             </ul>
                         </div>
@@ -373,7 +385,10 @@ img {
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>O'levels</label>
+                                        <label>O'Levels</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Edexcel, British Council</p>
                                     </div>
                                 </div>
                             </div>
@@ -434,7 +449,7 @@ img {
 
         var myVideo = document.getElementById("videoPlaySrc");
         if(this.id == "employeeManagementSystem"){
-            myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+            myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Sample.mp4";
             let file = "/profile_site/projectDetails/desktopApp/employeeManagementSystem.html";
             if(file){
                 const projectDescription = document.getElementById('projectDetails');
@@ -469,6 +484,28 @@ img {
                 }
             };
             xhttp.open('GET', '/profile_site/projectDetails/desktopApp/transportationManagementSystem.html', true);
+            xhttp.send();
+        }
+    });
+
+
+    //Research Modal
+
+    $(document).on("click", "#researchIoT", function (e) {
+        e.preventDefault();
+
+        let file = "/profile_site/projectDetails/research/ioT.html";
+        if(file){
+            const projectDescription = document.getElementById('researchModalTitle');
+            var title = document.getElementById("researchModalTitle");
+            title.innerHTML = this.text;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projectDescription.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', '/profile_site/projectDetails/research/ioT.html', true);
             xhttp.send();
         }
     });

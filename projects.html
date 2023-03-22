@@ -1,6 +1,16 @@
 
 <div>
-    <h4 class="not-overflow"><strong><u>Web Application</u></strong></h4>
+    <h4 class="not-overflow"><strong><u>Research Articles</u></strong></h4>
+    <ul>
+        <li class="not-overflow">
+            <a id="researchIoT" class="researchDetails" href="javascript:void(0)" data-toggle="modal" data-target="#researchInformationModal">
+                Advantages and Challenges of Implementing IoT in Bangladesh's Agriculture
+            </a>
+            <hr>
+        </li>
+    </ul>
+
+    <h4 class="not-overflow"><strong><u>Web Applications</u></strong></h4>
     <ul>
         <li class="not-overflow">
             <a href="https://github.com/TajbiurShahriorRimon/EduMax--Online-Teaching-And-Learning-Platform">
@@ -28,7 +38,7 @@
         </li>
     </ul>
 
-    <h4 class="not-overflow"><strong><u>Desktop Application</u></strong></h4>
+    <h4 class="not-overflow"><strong><u>Desktop Applications</u></strong></h4>
     <ul>
         <li class="not-overflow">
             <a id="transportationManagementSystem" class="projectDetails" href="javascript:void(0)" data-toggle="modal" data-target="#projectInformationModal">
@@ -60,6 +70,28 @@
             <hr>
             
             <div id="projectDetails"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--For Reasearch details-->
+<div class="modal fade" id="researchInformationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:none;">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title not-overflow" id="researchModalTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="researchDescription">
+
+            <div id="researchDetails"></div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
