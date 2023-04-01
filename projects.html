@@ -19,7 +19,7 @@
             <hr>
         </li>
         <li class="not-overflow">
-            <a href="https://github.com/TajbiurShahriorRimon/MidLaravelPoject">
+            <a id="fundrasingCharity" class="projectDetails" href="javascript:void(0)" data-toggle="modal" data-target="#projectInformationModal">
                 Fundraising for Charity using Laravel Framework (University Group Project)
             </a>
             <hr>
@@ -55,24 +55,28 @@
     </ul>
 </div>
 
-<div class="modal fade" id="projectInformationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:none;">
+<div class="modal fade" id="projectInformationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" 
+    aria-hidden="true" style="display:none;" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-header" style="background-color:darkgreen;">
+          <strong><h4 class="modal-title" id="modalTitle" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></h4></strong>
+          <button type="button" class="closeModal" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body" id="projectDescription">
-            <video id="videoPlaySrc" controls>
+            <!-- <video id="videoPlaySrc" controls>
             </video>
+            <hr> -->
+            <div id="displayVideo">
+                
+            </div>
             <hr>
-            
             <div id="projectDetails"></div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="closeModal btn btn-danger" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -82,8 +86,8 @@
 <div class="modal fade" id="researchInformationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:none;">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title not-overflow" id="researchModalTitle"></h5>
+        <div class="modal-header" style="background-color:aqua">
+          <strong><h4 class="modal-title not-overflow" id="researchModalTitle" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></h4></strong>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

@@ -183,6 +183,11 @@ img {
   color: rgb(208, 82, 82);
 }
 
+iframe{
+    width: 100%;
+    height: 500px;
+}
+
 </style>
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -208,17 +213,20 @@ img {
                             <h5>
                                 <strong>Tajbiur Shahrior Rimon</strong>
                             </h5>
-                            <a href="https://www.facebook.com/tajbiurshahrior.rimon" class="fa fa-facebook"></a>
-                            <a href="https://github.com/TajbiurShahriorRimon" class="fa fa-github"></a>
+                            <a href="https://www.facebook.com/tajbiurshahrior.rimon" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://github.com/TajbiurShahriorRimon" target="_blank"><i class="fa fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/tajbiur-shahrior-rimon-1aa3b7222/" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
                             <h5 class="color: green;">About Me</h5> <hr>
                             <p class="proile-rating not-overflow"><strong>
-                                Assalamualaikum. I am interested working in back-end software development.
+                                I am interested working in back-end software development.
                                 Frameworks like ASP.NET MVC, Web API, Laravel, React JS are my interests. I am looking to work on
-                                Blockchain technology and Smart Contract. My research interest is in Data Mining and IoT
+                                Blockchain technology and Smart Contracts. My research interest is in Data Mining and IoT
                             </strong></p>
                             <a href="/profile_site/cv/Resume.pdf" style="float: right;" target="_blank">
                                 <button id="resumeBtn" class="btn">
@@ -285,7 +293,7 @@ img {
                                                 <label>Phone</label>
                                             </div>
                                             <div class="col-md-6 not-overflow">
-                                                <p>01821947780</p>
+                                                <p>+88 01821947780</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -426,6 +434,29 @@ img {
         }
     }
 
+    $(document).on("click", "#fundrasingCharity", function (e) {
+        e.preventDefault();
+
+        //var myVideo = document.getElementById("videoPlaySrc");
+        //myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+        let file = "/profile_site/projectDetails/webApp/fundraisingCharity.html";
+        if(file){
+            const projectDescription = document.getElementById('projectDetails');
+            var title = document.getElementById("modalTitle");
+            title.innerHTML = this.text;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projectDescription.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', '/profile_site/projectDetails/webApp/fundraisingCharity.html', true);
+            xhttp.send();
+        }
+
+        //myVideo.load();
+    });
+
     $(document).on("click", "#eCommerceJavaSpring", function (e) {
         e.preventDefault();
 
@@ -455,9 +486,9 @@ img {
         // var modal = bootstrap.Modal.getOrCreateInstance(myModal)
         // modal.show();
 
-        var myVideo = document.getElementById("videoPlaySrc");
+        //var myVideo = document.getElementById("videoPlaySrc");
+        //myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Sample.mp4";
         if(this.id == "employeeManagementSystem"){
-            myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Sample.mp4";
             let file = "/profile_site/projectDetails/desktopApp/employeeManagementSystem.html";
             if(file){
                 const projectDescription = document.getElementById('projectDetails');
@@ -473,8 +504,10 @@ img {
                 xhttp.send();
             }
         }
+
+        loadVideo("/profile_site/files/desktopApp/EmployeeManagementSystem/Sample.mp4");
         
-        myVideo.load();
+        //myVideo.load();
     });
 
     $(document).on("click", "#transportationManagementSystem", function (e) {
@@ -517,6 +550,23 @@ img {
             xhttp.send();
         }
     });
+
+    function loadVideo(videoFileLocation){
+        let videoPlayer = `<video src="${videoFileLocation}" controls></video>`;
+        //let videoPlayer = `<h1>Hello World<h2>`
+        document.getElementById("displayVideo").innerHTML = videoPlayer;
+        
+    }
+
+    // $(".modal").on("hidden.bs.modal", function(){
+    //     alert("hello");
+    //     $(".modal-body").html("");
+    // });
+
+    $(document).on("click", ".closeModal", function(e){
+        document.getElementById("displayVideo").innerHTML = "";
+        document.getElementById("projectDetails").innerHTML = "";
+    })
     
     // $(document).on("click", ".projectDetails", function () {
     //     alert("dsd");
