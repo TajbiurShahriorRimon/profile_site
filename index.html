@@ -460,7 +460,6 @@ iframe{
     $(document).on("click", "#eCommerceJavaSpring", function (e) {
         e.preventDefault();
 
-        //var myVideo = document.getElementById("videoPlaySrc");
         //myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
         let file = "/profile_site/projectDetails/webApp/eCommerceJavaSpring.html";
         if(file){
@@ -477,7 +476,8 @@ iframe{
             xhttp.send();
         }
 
-        //myVideo.load();
+        loadVideo("/profile_site/files/webApp/eCommerceJavaSpring/ECommerce_SpringBoot.mp4");
+
     });
 
     $(document).on("click", "#employeeManagementSystem", function(e){
@@ -553,15 +553,8 @@ iframe{
 
     function loadVideo(videoFileLocation){
         let videoPlayer = `<video src="${videoFileLocation}" controls></video>`;
-        //let videoPlayer = `<h1>Hello World<h2>`
-        document.getElementById("displayVideo").innerHTML = videoPlayer;
-        
+        document.getElementById("displayVideo").innerHTML = videoPlayer;        
     }
-
-    // $(".modal").on("hidden.bs.modal", function(){
-    //     alert("hello");
-    //     $(".modal-body").html("");
-    // });
 
     $(document).on("click", ".closeModal", function(e){
         document.getElementById("displayVideo").innerHTML = "";
