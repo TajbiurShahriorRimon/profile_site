@@ -553,8 +553,7 @@ iframe{
 
     $(document).on("click", "#researchEthics", function (e) {
         e.preventDefault();
-
-        let file = "/profile_site/projectDetails/research/Ethical_Issues_in_Online_Education.html";
+        let file = "/profile_site/projectDetails/research/ethics.html";
         if(file){
             const projectDescription = document.getElementById('researchDetails');
             var title = document.getElementById("researchModalTitle");
@@ -565,7 +564,7 @@ iframe{
                     projectDescription.innerHTML = this.responseText;
                 }
             };
-            xhttp.open('GET', '/profile_site/projectDetails/research/Ethical_Issues_in_Online_Education.html', true);
+            xhttp.open('GET', '/profile_site/projectDetails/research/ethics.html', true);
             xhttp.send();
         }
     });
