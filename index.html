@@ -551,6 +551,25 @@ iframe{
         }
     });
 
+    $(document).on("click", "#researchEthics", function (e) {
+        e.preventDefault();
+
+        let file = "/profile_site/projectDetails/research/Ethical_Issues_in_Online_Education.html";
+        if(file){
+            const projectDescription = document.getElementById('researchDetails');
+            var title = document.getElementById("researchModalTitle");
+            title.innerHTML = this.text;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projectDescription.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', '/profile_site/projectDetails/research/Ethical_Issues_in_Online_Education.html', true);
+            xhttp.send();
+        }
+    });
+
     function loadVideo(videoFileLocation){
         let videoPlayer = `<video src="${videoFileLocation}" controls></video>`;
         document.getElementById("displayVideo").innerHTML = videoPlayer;        
