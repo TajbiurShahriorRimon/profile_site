@@ -332,7 +332,10 @@ iframe{
                                             Solidity
                                         </li>
                                         <li class="not-overflow">
-                                            Java (Spring Boot)
+                                            Java, Spring Boot
+                                        </li>
+										<li class="not-overflow">
+                                            Python
                                         </li>
                                         <li class="not-overflow">
                                             C, C++
@@ -375,9 +378,17 @@ iframe{
 
                             <!--Career Tab's data-->
                             <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="profile-tab">
+								<div class="row">
+                                    <div class="col-md-6">
+                                        <label>Master’s of Science in Computational Science</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><a href="https://www.aiub.edu/" class="not-overflow">Laurentian University</a></p>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>University</label>
+                                        <label>Bachelor’s of Science in Computer Information System</label>
                                     </div>
                                     <div class="col-md-6">
                                         <p><a href="https://www.aiub.edu/" class="not-overflow">American International University-Bangladesh (AIUB)</a></p>
@@ -401,7 +412,7 @@ iframe{
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Software Developer (Internship) for 4 months</label>
+                                        <label>Software Developer (Dec 2021 - April 2022)</label>
                                     </div>
                                     <div class="col-md-6">
                                         <p>Alphasoft Technology Limited</p>
@@ -477,6 +488,31 @@ iframe{
         }
 
         loadVideo("/profile_site/files/webApp/eCommerceJavaSpring/ECommerce_SpringBoot.mp4");
+
+    });
+	
+	$(document).on("click", "#roboticsLimo", function (e) {
+        e.preventDefault();
+
+        //myVideo.src = "/profile_site/files/desktopApp/EmployeeManagementSystem/Presentation2.mp4";
+        let file = "/profile_site/projectDetails/roboticsLimo/limoRobot.html";
+        if(file){
+            const projectDescription = document.getElementById('projectDetails');
+            var title = document.getElementById("modalTitle");
+            title.innerHTML = this.text;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    projectDescription.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', '/profile_site/projectDetails/roboticsLimo/limoRobot.html', true);
+            xhttp.send();
+        }
+
+        loadVideo("/profile_site/files/roboticsLimo/Vid1.MOV");
+		loadVideo("/profile_site/files/roboticsLimo/Vid3.MOV");
+		loadVideo("/profile_site/files/roboticsLimo/Vid2.MOV");
 
     });
 
